@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
 	if(argc < 3){
 	printf("Program need 2 arguments!\n");
 	return -1;
-}
+	}
     //struct bpf_redirect_info_short *bpf;
     int32_t value = atoi(argv[1]);
     char* pth = argv[2];
