@@ -32,7 +32,6 @@ MODULE_VERSION("0.01");
 
 dev_t dev = 0;
 int pid = 0;
-static struct cdev etx_cdev;
 
 struct message {
         struct syscall_info si;
