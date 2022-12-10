@@ -95,7 +95,7 @@ static ssize_t etx_write(struct file *filp, const char __user *buf, size_t len, 
 
 static long etx_ioctl(struct file *file, unsigned int cmd, unsigned long arg){
         struct path path;
-	const int i = 1024;
+	const int j = 1024;
 	char path_arg[i];
         switch(cmd) {
               case WR_SVALUE:
@@ -105,7 +105,7 @@ static long etx_ioctl(struct file *file, unsigned int cmd, unsigned long arg){
                        pr_info("Pid = %d\n", pid);
                        break;
                case WR_AVALUE:
-               	сopy_from_user(path_arg, (char*) arg, i);
+               	сopy_from_user(path_arg, (char*) arg, j);
 		kern_path(path_arg, LOOKUP_FOLLOW, &path) ;
                 break;
                case RD_VALUE:
