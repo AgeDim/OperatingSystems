@@ -96,7 +96,7 @@ static ssize_t etx_write(struct file *filp, const char __user *buf, size_t len, 
 static long etx_ioctl(struct file *file, unsigned int cmd, unsigned long arg){
         struct path path;
 	const int j = 1024;
-	char path_arg[i];
+	char path_arg[j];
         switch(cmd) {
               case WR_SVALUE:
               	if( copy_from_user(&pid ,(int*) arg, sizeof(pid)) ){
